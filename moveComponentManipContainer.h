@@ -1,6 +1,6 @@
 #pragma once
 
-#include "moveComponentTool.h"
+#include "moveComponentToolCmd.h"
 #include "moveComponentManip.h"
 #include "moveComponentData.h"
 
@@ -30,7 +30,7 @@ public:
 	static MTypeId		id;
 	
 	MoveComponentData	*m_data;
-	MoveComponentTool	*m_cmd;
+	MoveComponentToolCmd	*m_cmd;
 	MoveComponentManip	*m_Xptr,
 						*m_Yptr,
 						*m_Zptr,

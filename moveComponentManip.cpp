@@ -1,7 +1,8 @@
 #include "moveComponentManip.h"
 #include "moveComponentConstants.h"
-#include "moveComponentContext.h"
+#include "moveComponentCtx.h"
 #include "../_library/SCamera.h"
+
 #include <maya\MGlobal.h>
 #include <maya\MQuaternion.h>
 #include <maya\MVectorArray.h>
@@ -10,6 +11,7 @@
 #include <maya\MFnCamera.h>
 #include <maya\MAngle.h>
 #include <maya\MFnMesh.h>
+#include <maya\MToolsInfo.h>
 
 MTypeId MoveComponentManip::id(0x00127886);
 
@@ -161,8 +163,8 @@ MStatus MoveComponentManip::doPress(M3dView& view){
 	m_data->setMode(m_manipMode);
 	m_data->setAxis(m_direction);
 
-	MoveComponentContext* context = m_data->getContext();
-	context->setDirty();
+	MoveComponentCtx* context = m_data->getContext();
+	MToolsInfo::setDirtyFlag(*context);
 
 	// Create and set tool command
 	m_cmd = context->getToolCommand();

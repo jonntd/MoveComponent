@@ -12,7 +12,7 @@
 #include <maya\MString.h>
 #include <map>
 
-class MoveComponentContext;
+class MoveComponentCtx;
 
 class MoveComponentData
 {
@@ -21,7 +21,7 @@ public:
 	~MoveComponentData();
 
 	// Set data
-	void					setContext(MoveComponentContext *context);
+	void					setContext(MoveComponentCtx *context);
 	void					setSpace(int space);
 	void					setOrientation(double orientation[3]);
 	void					setMode(int mode);
@@ -33,7 +33,7 @@ public:
 	void					setDelta(double delta);
 
 	// Get data
-	MoveComponentContext*	getContext();
+	MoveComponentCtx*	getContext();
 	int						getSpace();
 	MDoubleArray			getOrientation();
 	int						getMode();
@@ -61,7 +61,7 @@ public:
 	static bool				intArrayContains(MIntArray& list, int element, int& index);
 
 private:
-	MoveComponentContext *m_context;
+	MoveComponentCtx *m_context;
 
 	// Settings	
 	double	m_orientation[3],

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "moveComponentData.h"
-#include "moveComponentTool.h"
+#include "moveComponentToolCmd.h"
 #include "SPlane.h"
 
 #include <maya\MPxManipulatorNode.h>
@@ -42,7 +42,7 @@ public:
 	static MTypeId	id;
 private:
 	MoveComponentData	*m_data;
-	MoveComponentTool	*m_cmd;
+	MoveComponentToolCmd	*m_cmd;
 
 	MPoint			m_start;
 	SPlane			m_plane;

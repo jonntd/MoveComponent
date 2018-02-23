@@ -1,6 +1,6 @@
 #pragma once
 
-#define kContextName			"moveComponentContext"
+#define kContextName			"moveComponentCtx"
 #define kCommandName			"moveComponentCmd"
 #define kManipName				"moveComponentManip"
 #define kManipContainerName		"moveComponentManipContainer"
@@ -16,8 +16,6 @@
 #define kModeFlagLong			"-mode"
 #define kSensitivityFlag		"-s"
 #define kSensitivityFlagLong	"-sensitivity"
-#define kPresetFlag				"-p"
-#define kPresetFlagLong			"-preset"
 #define kStepFlag				"-st"
 #define kStepFlagLong			"-step"
 
